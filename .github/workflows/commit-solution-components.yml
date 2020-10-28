@@ -5,7 +5,8 @@ on:
 
 jobs:
   build:
-    runs-on: [self-hosted, windows, x64]
+    #runs-on: [self-hosted, windows, x64]
+    runs-on: windows-latest
     env:
       environmentUrl: https://dreamingincrm.crm6.dynamics.com
       userName: "actionsuser@dreamingincrm.onmicrosoft.com"
