@@ -2,11 +2,11 @@ name: deploy-solution-ci
 
 on:
   workflow_dispatch:
-  #push:
-  #  branches:
-  #    - master
-  #  paths:
-  #    - Solutions/**
+  push:
+    branches:
+      - master
+    paths:
+      - Solutions/**
 
 jobs:
   build:
