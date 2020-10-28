@@ -15,14 +15,14 @@ jobs:
       - uses: actions/checkout@v2
 
       - id: who-am-i
-        uses: microsoft/powerplatform-actions/who-am-i@v0.1.7
+        uses: microsoft/powerplatform-actions/who-am-i@v0.1.8
         with:
           environment-url: ${{ env.url }}
           user-name: ${{ env.username }}
           password-secret: ${{ secrets.password }}
 
       - id: clone-solution
-        uses: microsoft/powerplatform-actions/clone-solution@v0.1.7
+        uses: microsoft/powerplatform-actions/clone-solution@v0.1.8
         with:
           environment-url: ${{ env.url }}
           user-name: ${{ env.username }}
@@ -41,7 +41,7 @@ jobs:
           echo "::set-output name=branchName::${{ env.solution }}_${{ steps.solution-version.outputs.info }}"
 
       - id: create-solution-branch
-        uses: microsoft/powerplatform-actions/branch-solution@ad020db
+        uses: microsoft/powerplatform-actions/branch-solution@v0.1.8
         with:
           solution-folder: "Solutions/${{ env.solution }}"
           solution-target-folder: "Solutions/${{ env.solution }}"

@@ -17,7 +17,7 @@ jobs:
 
       - id: who-am-i
         name: Connecting to ${{ env.environmentUrl }} as ${{ env.userName }}
-        uses: microsoft/powerplatform-actions/who-am-i@v0.1.7
+        uses: microsoft/powerplatform-actions/who-am-i@v0.1.8
         with:
           environment-url: ${{ env.environmentUrl }}
           user-name: ${{ env.userName }}
@@ -35,7 +35,7 @@ jobs:
 
       - id: export-managed-solution
         name: Export ${{ env.solution }} as Managed
-        uses: microsoft/powerplatform-actions/export-solution@v0.1.7
+        uses: microsoft/powerplatform-actions/export-solution@v0.1.8
         with:
           environment-url: ${{ env.environmentUrl }}
           user-name: ${{ env.userName }}
@@ -47,7 +47,7 @@ jobs:
 
       - id: export-unmanaged-solution
         name: Export ${{ env.solution }} as Unmanaged
-        uses: microsoft/powerplatform-actions/export-solution@v0.1.7
+        uses: microsoft/powerplatform-actions/export-solution@v0.1.8
         with:
           environment-url: ${{ env.environmentUrl }}
           user-name: ${{ env.userName }}
@@ -58,7 +58,7 @@ jobs:
 
       - id: unpack-solution
         name: Unpack ${{ env.solution }}
-        uses: microsoft/powerplatform-actions/unpack-solution@v0.1.7
+        uses: microsoft/powerplatform-actions/unpack-solution@v0.1.8
         with:
           solution-file: "out/${{ env.solution }}.zip"
           solution-folder: "Solutions/${{ env.solution }}/src"
@@ -72,7 +72,7 @@ jobs:
 
       - id: create-solution-branch
         name: Create ${{ steps.branch-name.outputs.branchName }} branch
-        uses: microsoft/powerplatform-actions/branch-solution@ad020db
+        uses: microsoft/powerplatform-actions/branch-solution@v0.1.8
         with:
           solution-folder: "Solutions/${{ env.solution }}"
           solution-target-folder: "Solutions/${{ env.solution }}"
